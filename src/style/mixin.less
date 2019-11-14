@@ -1,0 +1,127 @@
+// 使用vw和vh换算;
+@wa: 100vw;
+@ha: 100vh;
+@wu: @wa / 540;
+@hu: @ha / 960;
+
+// 全边框
+.border-1px(@color){
+  position:relative;
+  &:before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 1px;
+    border: 1px solid @color;
+    color: @color;
+    height: 200%;
+    border-radius: 0.25rem;
+    transform-origin: left top;
+    transform: scale(0.5);
+  }
+}
+
+// 隐藏边框
+.border-none(){
+  &:after {
+    display:none;
+  }
+}
+
+// 单边框（上边框）一像素
+.border-top-1px(@color){
+  position:relative;
+  &:before{
+    content:'';
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom: auto;
+    right: auto;
+    height: 1px;
+    width: 100%;
+    background-color: @color;
+    z-index: 1;
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+      transform: scaleY(0.5);
+    }
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+      transform: scaleY(0.33);
+    }
+  }
+}
+
+// 单边框（下边框）一像素
+.border-bottom-1px(@color){
+  position:relative;
+  &:before{
+    content:'';
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    top: auto;
+    right: auto;
+    height: 1px;
+    width: 100%;
+    background-color: @color;
+    z-index: 1;
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+      transform: scaleY(0.5);
+    }
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+      transform: scaleY(0.33);
+    }
+  }
+}
+
+// 单边框（左边框）一像素
+.border-left-1px(@color){
+  position:relative;
+  &:before{
+    content:'';
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom: auto;
+    right: auto;
+    height: 100%;
+    width: 1px;
+    background-color: @color;
+    z-index: 1;
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+      transform: scaleY(0.5);
+    }
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+      transform: scaleY(0.33);
+    }
+  }
+}
+
+// 单边框（右边框）一像素
+.border-right-1px(@color){
+  position:relative;
+  &:before{
+    content:'';
+    display:block;
+    position:absolute;
+    right:0;
+    top:0;
+    bottom: auto;
+    left: auto;
+    height: 100%;
+    width: 1px;
+    background-color: @color;
+    z-index: 1;
+    @media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+      transform: scaleY(0.5);
+    }
+    @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+      transform: scaleY(0.33);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+  font-weight: lighter;
+  font-family: "PingFang-SC",Helvetica;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  &:focus { 
+    outline: none;
+  }
+}
+
+html,body {
+  background-color: #f4f4f4;
+}
+img {
+  display: block;
+  width:100%;
+  height: 100%;
+  border: 0;
+}
+// 消除输入框和按钮的原生外观
+input[type="button"], 
+input[type="submit"], 
+input[type="search"], 
+input[type="reset"],
+textarea {
+    -webkit-appearance: none;
+}
+
